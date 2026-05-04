@@ -7,7 +7,7 @@
   "trustMicrosoftNuGetFeeds": true,
   "trustedNuGetFeeds": [
     {
-      "url": "https://nuget.pkg.github.com/gitspacecadet/index.json",
+      "url": "https://nuget.pkg.github.com/K3-Fashion-Solutions/index.json",
       "authTokenSecret": "GhTokenWorkflow",
       "patterns": [
         "K3.*"
@@ -66,9 +66,9 @@
   "doNotRunTests": true,
   "useCompilerFolder": false,
   "doNotPublishApps": false,
-  "doNotSignApps": true,
+  "doNotSignApps": false,
   "runs-on": "ubuntu-latest",
-  "githubRunner": "self-hosted",
+  "githubRunner": "windows-latest",
   "incrementalBuilds": {
     "onPush": false,
     "onPull_Request": false,
