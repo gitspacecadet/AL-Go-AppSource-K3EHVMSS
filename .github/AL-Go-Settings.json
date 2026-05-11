@@ -5,59 +5,12 @@
   "enableAppSourceCop": true,
   "installOnlyReferencedApps": true,
   "trustMicrosoftNuGetFeeds": true,
-  "trustedNuGetFeeds": [
-    {
-      "url": "https://nuget.pkg.github.com/K3-Fashion-Solutions/index.json",
-      "authTokenSecret": "GhTokenWorkflow",
-      "patterns": [
-        "K3BusinessTechnologyGroup.*"
-      ]
-    }
-  ],
   "DeliverToGitHubPackages": {
     "ContinuousDelivery": true,
     "Branches": ["main", "release/*"]
   },
   "CICDPushBranches": ["main", "release/*", "feature/*"],
   "CICDPullRequestBranches": ["main"],
-  "conditionalSettings": [
-    {
-      "branches": ["main"],
-      "settings": {
-        "nuGetFeedSelectMode": "LatestMatching"
-      }
-    },
-    {
-      "branches": ["release/*"],
-      "settings": {
-        "nuGetFeedSelectMode": "EarliestMatching"
-      }
-    },
-    {
-      "workflows": [" Test Next Minor"],
-      "settings": {
-        "workflowSchedule": {
-          "cron": "39 21 * * *"
-        }
-      }
-    },
-    {
-      "workflows": [" Test Next Major"],
-      "settings": {
-        "workflowSchedule": {
-          "cron": "44 21 * * *"
-        }
-      }
-    },
-    {
-      "workflows": [" Update AL-Go System Files"],
-      "settings": {
-        "workflowSchedule": {
-          "cron": "49 21 * * *"
-        }
-      }
-    }
-  ],
   "enableCodeCop": true,
   "enableUICop": true,
   "skipUpgrade": false,
