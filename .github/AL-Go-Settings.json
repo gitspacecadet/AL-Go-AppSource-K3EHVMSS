@@ -20,8 +20,8 @@
   "useCompilerFolder": false,
   "doNotPublishApps": false,
   "doNotSignApps": false,
-  "runs-on": "ubuntu-latest",
-  "githubRunner": "windows-latest",
+  "runs-on": "self-hosted",
+  "githubRunner": "self-hosted",
   "incrementalBuilds": {
     "onPush": false,
     "onPull_Request": false,
